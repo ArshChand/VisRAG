@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+
+# Trained weights, logs, and result figures are part of the repository.
+!checkpoints/best_calibrated_visrag.pt
+!results/headline_results.csv
+!results/train_log.json
+!results/calibration_and_tiling.png

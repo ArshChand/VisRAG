@@ -1,0 +1,152 @@
+\documentclass[8pt,a4paper]{article}
+
+% ------------------------------------------------
+% Packages
+% ------------------------------------------------
+\usepackage[
+    top=0.15in,
+    bottom=0.15in,
+    left=0.55in,
+    right=0.55in
+]{geometry}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+% ------------------------------------------------
+% Formatting
+% ------------------------------------------------
+
+% Black-and-white hyperlinks
+\hypersetup{
+    colorlinks=true,
+    allcolors=black
+}
+
+% Reduce line spacing
+\linespread{0.52}
+
+% Reduce paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+
+% Reduce section heading spacing
+\titlespacing*{\subsection}
+{0pt}{7pt}{3pt}
+
+% Table formatting
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.05}
+
+\captionsetup[table]{
+    font=small,
+    labelfont=bf,
+    position=top,
+    skip=3pt
+}
+
+% ------------------------------------------------
+% Document
+% ------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+
+% ------------------------------------------------
+% Title and Team Information
+% ------------------------------------------------
+\begin{center}
+\setlength{\baselineskip}{10pt}
+{\large\bfseries Calibrated Retrieval-Aware Posteriors for VisRAG\par}
+\vspace{2pt}
+\textbf{Team:} Visionaries\par
+Aaryan Bondekar (230101001),
+Anirudh Bhardwaj (230101010),
+Arsh Chand (230101017),
+Bhavya Bharti (230122015),
+Jinay Mehta (230122021)\par
+\textbf{GitHub:} \url{https://github.com/ArshChand/VisRAG}\par
+\end{center}
+
+\vspace{-6pt}
+
+% ------------------------------------------------
+\subsection*{I. Abstract (Maximum 100 Words)}
+% ------------------------------------------------
+\begin{enumerate}
+    \item VisRAG ranks page images by cosine similarity and passes a fixed top-$k$ to the generator, but page weights use an unscaled softmax.
+    \item At $\tau{=}1$ those weights are nearly uniform, so a fluent wrong page beats the true page and equal-width strips waste pixels.
+    \item We fit $\tau$, marginalize matching answers, tile area by posterior mass, and stop once cumulative mass reaches $\rho$.
+    \item In a seeded simulation matched to VisRAG's published retrieval statistics (3{,}607 queries), fitted $\tau$ cuts ECE from 0.575 to 0.094, and $k{=}5$ accuracy rises from 51.46\% to 68.34\%.
+\end{enumerate}
+
+% ------------------------------------------------
+\subsection*{II. Proposed Novelty \& Technical Contribution}
+% ------------------------------------------------
+\begin{enumerate}
+    \item Four selectors sit on the retriever's cosine scores: C1 marginalizes $P(a\mid q,d_j)$ with $p(d_j\mid q)$; C2 sets page area from $p_i^{\alpha}$; C3 keeps the shortest prefix with mass $\ge\rho$; S2 is a 97-parameter net on posterior, answer confidence, agreement, and rank.
+    \item C1--C3 are training-free changes to decoding and page layout. S2 is trained with binary cross-entropy on the 20\% dev split, together with NLL-fitted $\tau$.
+    \item VisRAG Eq.~(4) takes one page, $\arg\max_j P(a_j\mid q,d_j)\,\mathrm{softmax}(s)_j$, with equal strips and a fixed $k$. We replace that weight by $\mathrm{softmax}(s/\tau)$ and use it for the answer, the pixels, and $k$.
+\end{enumerate}
+
+% ------------------------------------------------
+\subsection*{III. Theoretical / Mathematical Justification}
+% ------------------------------------------------
+\begin{enumerate}
+    \item With cosine scores $s(q,d_j)$, $p(d_j\mid q)=\mathrm{softmax}(s/\tau)$. Pooling answers within the 5\% numeric rule,
+    \[
+        a^{\star}=\arg\max_a\sum_j P(a\mid q,d_j)\,p_j,\quad
+        w_i=\frac{p_i^{\alpha}}{\sum_j p_j^{\alpha}},\quad
+        k^{\star}=\min\{k\le k_{\max}:\textstyle\sum_{i\le k}p_i\ge\rho\}.
+    \]
+    \item $\tau=\exp(\log\tau)$ is fit by dev NLL. A lower page must beat a log-odds gap $(s_1-s_j)/\tau$, so in our simulation a fluent distractor ($\log P\approx-0.12$ to $-0.25$) loses to a moderate true page ($\log P\approx-0.35$ to $-0.55$). For $\alpha>0$, $p$ and $w$ are similarly ordered, so Chebyshev gives $\sum_i p_i w_i\ge 1/k$.
+    \item One posterior therefore stops the flat product rule, raises true-page pixel share above $1/k$, and drops pages outside mass $\rho$.
+\end{enumerate}
+
+% ------------------------------------------------
+\subsection*{IV. Comparative Results \& Empirical Evaluation}
+% ------------------------------------------------
+\begin{enumerate}
+    \item \textbf{Data: a seeded simulation, not model runs.} For the six VisRAG sets (3{,}607 queries, Table~1 sizes), page ranks are sampled to match VisRAG-Ret's reported MRR@10 and Recall@10, generator log-probabilities are drawn from fixed ranges with set distractor rates, and latency is modeled at 180\,ms per page. Seed 0 uses 722 dev and 2{,}885 test queries; simulated test retrieval gives MRR@10 $=77.77\%$ and Recall@10 $=91.84\%$.
+    \item Table~\ref{tab:results}: $k{=}5$ macro accuracy goes from 51.46\% ($\tau{=}1$) to 56.78\% ($\tau{=}0.02$), 64.92\% (Bayes), and 68.34\% (S2).
+    \item ECE falls $0.575\to 0.229\to 0.094$ at fitted $\tau{=}0.0132$. Tiling ($\alpha{=}0.5$) beats equal-width concat at $k{=}2,3,6$; true-page pixel share is 0.550, 0.417, 0.317 versus $1/k$ (0.500, 0.333, 0.167). Adaptive $k^{\star}$ uses 3.08 pages and 554\,ms, against 56.09\% and 1{,}800\,ms at fixed $k{=}10$.
+\end{enumerate}
+
+\begin{center}
+\captionof{table}{Simulated test-split comparison. Selector rows use $k{=}5$; adaptive $k^{\star}$ is the multi-image score; ms is modeled, not measured. Best accuracy and ECE in bold.}
+\label{tab:results}
+\small
+\begin{tabularx}{\linewidth}{@{}X c c c c@{}}
+\toprule
+\textbf{Method}
+& \makecell{\textbf{Acc.}\\(\% $\uparrow$)}
+& \makecell{\textbf{ECE}\\($\downarrow$)}
+& \makecell{\textbf{Pages}\\($\downarrow$)}
+& \makecell{\textbf{ms}\\($\downarrow$)}\\
+\midrule
+Weighted, $\tau{=}1$
+& 51.46 & 0.575 & 5 & 900\\
+Calibrated, $\tau{=}0.02$
+& 56.78 & 0.229 & 5 & 900\\
+Bayes marginal (C1)
+& 64.92 & 0.094 & 5 & 900\\
+\textbf{S2 aggregator}
+& \textbf{68.34} & \textbf{0.094} & 5 & 900\\
+Adaptive $k^{\star}$ (C3)
+& 63.13 & \textbf{0.094} & \textbf{3.08} & \textbf{554}\\
+\midrule
+$\Delta$ (S2 $-$ $\tau{=}1$)
+& \textbf{+16.88} & \textbf{$-$0.481} & 0 & 0\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{-6pt}
+\textbf{Result Interpretation:}
+At $\tau{=}1$, accuracy falls with $k$ (56.78, 56.02, 54.76, 51.46) because a fluent distractor enters a flat posterior. $\tau{=}0.02$ holds at 56.78. Bayes adds repeated answers ($+8.14$ at $k{=}5$); S2, which reads that agreement, reaches 68.34. Fixed $k{=}10$ is 6.96 points below $k{=}3$; $\rho{=}0.90$ stops at 3.08 pages and keeps 63.13. \textbf{Limitation:} distractor rates are simulation parameters, so these numbers show that each mechanism works when its assumptions hold, not how much it helps real VisRAG. Running VisRAG-Ret and MiniCPM-V on the real pages is the next step.
+
+\end{document}

@@ -1,0 +1,275 @@
+section,dataset,method,k,metric,value,source
+E0,ArxivQA,VisRAG-Ret cache,10,MRR@10,0.7528105933542381,realistic_cache_seed0
+E0,ArxivQA,VisRAG-Ret cache,10,Recall@10,0.8790199081163859,realistic_cache_seed0
+E0,ChartQA,VisRAG-Ret cache,10,MRR@10,0.7489999999999999,realistic_cache_seed0
+E0,ChartQA,VisRAG-Ret cache,10,Recall@10,0.88,realistic_cache_seed0
+E0,MP-DocVQA,VisRAG-Ret cache,10,MRR@10,0.7597419376489143,realistic_cache_seed0
+E0,MP-DocVQA,VisRAG-Ret cache,10,Recall@10,0.9112050739957717,realistic_cache_seed0
+E0,InfoVQA,VisRAG-Ret cache,10,MRR@10,0.8683258669321388,realistic_cache_seed0
+E0,InfoVQA,VisRAG-Ret cache,10,Recall@10,0.9721254355400697,realistic_cache_seed0
+E0,PlotQA,VisRAG-Ret cache,10,MRR@10,0.6166867954911434,realistic_cache_seed0
+E0,PlotQA,VisRAG-Ret cache,10,Recall@10,0.8927536231884058,realistic_cache_seed0
+E0,SlideVQA,VisRAG-Ret cache,10,MRR@10,0.9196629213483146,realistic_cache_seed0
+E0,SlideVQA,VisRAG-Ret cache,10,Recall@10,0.9752808988764045,realistic_cache_seed0
+E0,Average,VisRAG-Ret cache,10,MRR@10,0.7777046857957916,realistic_cache_seed0
+E0,Average,VisRAG-Ret cache,10,Recall@10,0.9183974899528394,realistic_cache_seed0
+E1,all-test,tau=1,10,ece,0.5749207606759702,realistic_cache_seed0
+E1,all-test,tau=1,10,nll,2.2254722389329644,realistic_cache_seed0
+E1,all-test,tau=1,10,mean_entropy,2.301983059804781,realistic_cache_seed0
+E1,all-test,tau=1,10,top1_accuracy,0.680415944540728,realistic_cache_seed0
+E1,all-test,tau=0.02,10,ece,0.2287678529979147,realistic_cache_seed0
+E1,all-test,tau=0.02,10,nll,1.149996668054787,realistic_cache_seed0
+E1,all-test,tau=0.02,10,mean_entropy,1.5056317152704422,realistic_cache_seed0
+E1,all-test,tau=0.02,10,top1_accuracy,0.680415944540728,realistic_cache_seed0
+E1,all-test,tau=fitted,10,ece,0.09350033163575282,realistic_cache_seed0
+E1,all-test,tau=fitted,10,nll,1.0709833897197003,realistic_cache_seed0
+E1,all-test,tau=fitted,10,mean_entropy,1.1286624023695622,realistic_cache_seed0
+E1,all-test,tau=fitted,10,top1_accuracy,0.680415944540728,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=1,1,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,Weighted tau=1,1,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=1,1,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=1,1,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,Weighted tau=1,1,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=1,1,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,Weighted tau=1,1,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,Weighted tau=1,1,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=1,2,accuracy,0.5712098009188361,realistic_cache_seed0
+E2,ChartQA,Weighted tau=1,2,accuracy,0.48,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=1,2,accuracy,0.5454545454545454,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=1,2,accuracy,0.6655052264808362,realistic_cache_seed0
+E2,PlotQA,Weighted tau=1,2,accuracy,0.3869565217391304,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=1,2,accuracy,0.7123595505617978,realistic_cache_seed0
+E2,Average,Weighted tau=1,2,accuracy,0.5602476075258577,realistic_cache_seed0
+E2,micro,Weighted tau=1,2,accuracy,0.5618717504332755,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=1,3,accuracy,0.555895865237366,realistic_cache_seed0
+E2,ChartQA,Weighted tau=1,3,accuracy,0.48,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=1,3,accuracy,0.53276955602537,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=1,3,accuracy,0.6358885017421603,realistic_cache_seed0
+E2,PlotQA,Weighted tau=1,3,accuracy,0.3753623188405797,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=1,3,accuracy,0.7056179775280899,realistic_cache_seed0
+E2,Average,Weighted tau=1,3,accuracy,0.547589036562261,realistic_cache_seed0
+E2,micro,Weighted tau=1,3,accuracy,0.5466204506065858,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=1,5,accuracy,0.5283307810107197,realistic_cache_seed0
+E2,ChartQA,Weighted tau=1,5,accuracy,0.44,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=1,5,accuracy,0.5031712473572939,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=1,5,accuracy,0.6045296167247387,realistic_cache_seed0
+E2,PlotQA,Weighted tau=1,5,accuracy,0.3507246376811594,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=1,5,accuracy,0.6606741573033708,realistic_cache_seed0
+E2,Average,Weighted tau=1,5,accuracy,0.5145717400128804,realistic_cache_seed0
+E2,micro,Weighted tau=1,5,accuracy,0.5157712305025997,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=0.02,1,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,Weighted tau=0.02,1,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=0.02,1,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=0.02,1,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,Weighted tau=0.02,1,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=0.02,1,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,Weighted tau=0.02,1,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,Weighted tau=0.02,1,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=0.02,2,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,Weighted tau=0.02,2,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=0.02,2,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=0.02,2,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,Weighted tau=0.02,2,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=0.02,2,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,Weighted tau=0.02,2,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,Weighted tau=0.02,2,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=0.02,3,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,Weighted tau=0.02,3,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=0.02,3,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=0.02,3,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,Weighted tau=0.02,3,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=0.02,3,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,Weighted tau=0.02,3,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,Weighted tau=0.02,3,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,Weighted tau=0.02,5,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,Weighted tau=0.02,5,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,Weighted tau=0.02,5,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,Weighted tau=0.02,5,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,Weighted tau=0.02,5,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,Weighted tau=0.02,5,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,Weighted tau=0.02,5,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,Weighted tau=0.02,5,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,Bayes,1,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,Bayes,1,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,Bayes,1,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,Bayes,1,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,Bayes,1,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,Bayes,1,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,Bayes,1,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,Bayes,1,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,Bayes,2,accuracy,0.6278713629402757,realistic_cache_seed0
+E2,ChartQA,Bayes,2,accuracy,0.58,realistic_cache_seed0
+E2,MP-DocVQA,Bayes,2,accuracy,0.5813953488372093,realistic_cache_seed0
+E2,InfoVQA,Bayes,2,accuracy,0.6986062717770035,realistic_cache_seed0
+E2,PlotQA,Bayes,2,accuracy,0.4652173913043478,realistic_cache_seed0
+E2,SlideVQA,Bayes,2,accuracy,0.750561797752809,realistic_cache_seed0
+E2,Average,Bayes,2,accuracy,0.6172753621019408,realistic_cache_seed0
+E2,micro,Bayes,2,accuracy,0.6135181975736569,realistic_cache_seed0
+E2,ArxivQA,Bayes,3,accuracy,0.664624808575804,realistic_cache_seed0
+E2,ChartQA,Bayes,3,accuracy,0.58,realistic_cache_seed0
+E2,MP-DocVQA,Bayes,3,accuracy,0.6194503171247357,realistic_cache_seed0
+E2,InfoVQA,Bayes,3,accuracy,0.7299651567944251,realistic_cache_seed0
+E2,PlotQA,Bayes,3,accuracy,0.5130434782608696,realistic_cache_seed0
+E2,SlideVQA,Bayes,3,accuracy,0.7662921348314606,realistic_cache_seed0
+E2,Average,Bayes,3,accuracy,0.6455626492645492,realistic_cache_seed0
+E2,micro,Bayes,3,accuracy,0.6481802426343154,realistic_cache_seed0
+E2,ArxivQA,Bayes,5,accuracy,0.6707503828483921,realistic_cache_seed0
+E2,ChartQA,Bayes,5,accuracy,0.58,realistic_cache_seed0
+E2,MP-DocVQA,Bayes,5,accuracy,0.6194503171247357,realistic_cache_seed0
+E2,InfoVQA,Bayes,5,accuracy,0.7317073170731707,realistic_cache_seed0
+E2,PlotQA,Bayes,5,accuracy,0.5246376811594203,realistic_cache_seed0
+E2,SlideVQA,Bayes,5,accuracy,0.7685393258426966,realistic_cache_seed0
+E2,Average,Bayes,5,accuracy,0.6491808373414025,realistic_cache_seed0
+E2,micro,Bayes,5,accuracy,0.6530329289428076,realistic_cache_seed0
+E2,ArxivQA,S2 aggregator,1,accuracy,0.5773353751914242,realistic_cache_seed0
+E2,ChartQA,S2 aggregator,1,accuracy,0.5,realistic_cache_seed0
+E2,MP-DocVQA,S2 aggregator,1,accuracy,0.547568710359408,realistic_cache_seed0
+E2,InfoVQA,S2 aggregator,1,accuracy,0.6707317073170732,realistic_cache_seed0
+E2,PlotQA,S2 aggregator,1,accuracy,0.39420289855072466,realistic_cache_seed0
+E2,SlideVQA,S2 aggregator,1,accuracy,0.7168539325842697,realistic_cache_seed0
+E2,Average,S2 aggregator,1,accuracy,0.5677821040004832,realistic_cache_seed0
+E2,micro,S2 aggregator,1,accuracy,0.5674176776429809,realistic_cache_seed0
+E2,ArxivQA,S2 aggregator,2,accuracy,0.6830015313935681,realistic_cache_seed0
+E2,ChartQA,S2 aggregator,2,accuracy,0.6,realistic_cache_seed0
+E2,MP-DocVQA,S2 aggregator,2,accuracy,0.6469344608879493,realistic_cache_seed0
+E2,InfoVQA,S2 aggregator,2,accuracy,0.7508710801393729,realistic_cache_seed0
+E2,PlotQA,S2 aggregator,2,accuracy,0.553623188405797,realistic_cache_seed0
+E2,SlideVQA,S2 aggregator,2,accuracy,0.7820224719101123,realistic_cache_seed0
+E2,Average,S2 aggregator,2,accuracy,0.6694087887894667,realistic_cache_seed0
+E2,micro,S2 aggregator,2,accuracy,0.6734835355285962,realistic_cache_seed0
+E2,ArxivQA,S2 aggregator,3,accuracy,0.6830015313935681,realistic_cache_seed0
+E2,ChartQA,S2 aggregator,3,accuracy,0.6,realistic_cache_seed0
+E2,MP-DocVQA,S2 aggregator,3,accuracy,0.6469344608879493,realistic_cache_seed0
+E2,InfoVQA,S2 aggregator,3,accuracy,0.7508710801393729,realistic_cache_seed0
+E2,PlotQA,S2 aggregator,3,accuracy,0.553623188405797,realistic_cache_seed0
+E2,SlideVQA,S2 aggregator,3,accuracy,0.7820224719101123,realistic_cache_seed0
+E2,Average,S2 aggregator,3,accuracy,0.6694087887894667,realistic_cache_seed0
+E2,micro,S2 aggregator,3,accuracy,0.6734835355285962,realistic_cache_seed0
+E2,ArxivQA,S2 aggregator,5,accuracy,0.6952526799387443,realistic_cache_seed0
+E2,ChartQA,S2 aggregator,5,accuracy,0.6,realistic_cache_seed0
+E2,MP-DocVQA,S2 aggregator,5,accuracy,0.6659619450317125,realistic_cache_seed0
+E2,InfoVQA,S2 aggregator,5,accuracy,0.7630662020905923,realistic_cache_seed0
+E2,PlotQA,S2 aggregator,5,accuracy,0.5739130434782609,realistic_cache_seed0
+E2,SlideVQA,S2 aggregator,5,accuracy,0.802247191011236,realistic_cache_seed0
+E2,Average,S2 aggregator,5,accuracy,0.6834068435917576,realistic_cache_seed0
+E2,micro,S2 aggregator,5,accuracy,0.6897746967071057,realistic_cache_seed0
+E4,ArxivQA,Horizontal concat,2,accuracy,0.5359877488514548,realistic_cache_seed0
+E4,ChartQA,Horizontal concat,2,accuracy,0.44,realistic_cache_seed0
+E4,MP-DocVQA,Horizontal concat,2,accuracy,0.507399577167019,realistic_cache_seed0
+E4,InfoVQA,Horizontal concat,2,accuracy,0.6097560975609756,realistic_cache_seed0
+E4,PlotQA,Horizontal concat,2,accuracy,0.3710144927536232,realistic_cache_seed0
+E4,SlideVQA,Horizontal concat,2,accuracy,0.651685393258427,realistic_cache_seed0
+E4,Average,Horizontal concat,2,accuracy,0.51930721826525,realistic_cache_seed0
+E4,micro,Horizontal concat,2,accuracy,0.5227036395147314,realistic_cache_seed0
+E4,all-test,Horizontal concat,2,pixel_share,0.5,realistic_cache_seed0
+E4,ArxivQA,Horizontal concat,3,accuracy,0.554364471669219,realistic_cache_seed0
+E4,ChartQA,Horizontal concat,3,accuracy,0.5,realistic_cache_seed0
+E4,MP-DocVQA,Horizontal concat,3,accuracy,0.5412262156448203,realistic_cache_seed0
+E4,InfoVQA,Horizontal concat,3,accuracy,0.6254355400696864,realistic_cache_seed0
+E4,PlotQA,Horizontal concat,3,accuracy,0.4246376811594203,realistic_cache_seed0
+E4,SlideVQA,Horizontal concat,3,accuracy,0.6764044943820224,realistic_cache_seed0
+E4,Average,Horizontal concat,3,accuracy,0.5536780671541947,realistic_cache_seed0
+E4,micro,Horizontal concat,3,accuracy,0.553206239168111,realistic_cache_seed0
+E4,all-test,Horizontal concat,3,pixel_share,0.33333333333333337,realistic_cache_seed0
+E4,ArxivQA,Horizontal concat,6,accuracy,0.48545176110260335,realistic_cache_seed0
+E4,ChartQA,Horizontal concat,6,accuracy,0.44,realistic_cache_seed0
+E4,MP-DocVQA,Horizontal concat,6,accuracy,0.4693446088794926,realistic_cache_seed0
+E4,InfoVQA,Horizontal concat,6,accuracy,0.5627177700348432,realistic_cache_seed0
+E4,PlotQA,Horizontal concat,6,accuracy,0.4144927536231884,realistic_cache_seed0
+E4,SlideVQA,Horizontal concat,6,accuracy,0.5415730337078651,realistic_cache_seed0
+E4,Average,Horizontal concat,6,accuracy,0.4855966545579988,realistic_cache_seed0
+E4,micro,Horizontal concat,6,accuracy,0.4890814558058926,realistic_cache_seed0
+E4,all-test,Horizontal concat,6,pixel_share,0.16666666666666669,realistic_cache_seed0
+E4,ArxivQA,Relevance tiling,2,accuracy,0.5773353751914242,realistic_cache_seed0
+E4,ChartQA,Relevance tiling,2,accuracy,0.5,realistic_cache_seed0
+E4,MP-DocVQA,Relevance tiling,2,accuracy,0.547568710359408,realistic_cache_seed0
+E4,InfoVQA,Relevance tiling,2,accuracy,0.6707317073170732,realistic_cache_seed0
+E4,PlotQA,Relevance tiling,2,accuracy,0.39420289855072466,realistic_cache_seed0
+E4,SlideVQA,Relevance tiling,2,accuracy,0.7168539325842697,realistic_cache_seed0
+E4,Average,Relevance tiling,2,accuracy,0.5677821040004832,realistic_cache_seed0
+E4,micro,Relevance tiling,2,accuracy,0.5674176776429809,realistic_cache_seed0
+E4,all-test,Relevance tiling,2,pixel_share,0.5503593677296937,realistic_cache_seed0
+E4,ArxivQA,Relevance tiling,3,accuracy,0.6385911179173047,realistic_cache_seed0
+E4,ChartQA,Relevance tiling,3,accuracy,0.58,realistic_cache_seed0
+E4,MP-DocVQA,Relevance tiling,3,accuracy,0.6004228329809725,realistic_cache_seed0
+E4,InfoVQA,Relevance tiling,3,accuracy,0.7090592334494773,realistic_cache_seed0
+E4,PlotQA,Relevance tiling,3,accuracy,0.47101449275362317,realistic_cache_seed0
+E4,SlideVQA,Relevance tiling,3,accuracy,0.7595505617977528,realistic_cache_seed0
+E4,Average,Relevance tiling,3,accuracy,0.6264397064831885,realistic_cache_seed0
+E4,micro,Relevance tiling,3,accuracy,0.6239168110918544,realistic_cache_seed0
+E4,all-test,Relevance tiling,3,pixel_share,0.4174811283498711,realistic_cache_seed0
+E4,ArxivQA,Relevance tiling,6,accuracy,0.6416539050535988,realistic_cache_seed0
+E4,ChartQA,Relevance tiling,6,accuracy,0.58,realistic_cache_seed0
+E4,MP-DocVQA,Relevance tiling,6,accuracy,0.6025369978858351,realistic_cache_seed0
+E4,InfoVQA,Relevance tiling,6,accuracy,0.7090592334494773,realistic_cache_seed0
+E4,PlotQA,Relevance tiling,6,accuracy,0.47681159420289854,realistic_cache_seed0
+E4,SlideVQA,Relevance tiling,6,accuracy,0.7595505617977528,realistic_cache_seed0
+E4,Average,Relevance tiling,6,accuracy,0.6282687153982603,realistic_cache_seed0
+E4,micro,Relevance tiling,6,accuracy,0.6263431542461005,realistic_cache_seed0
+E4,all-test,Relevance tiling,6,pixel_share,0.3173126812191299,realistic_cache_seed0
+E5,Average,Fixed k=3,,Average,0.6305183458424062,realistic_cache_seed0
+E5,all-test,Fixed k=3,,mean_k,3.0,realistic_cache_seed0
+E5,all-test,Fixed k=3,,latency_ms,540.0,realistic_cache_seed0
+E5,all-test,Fixed k=3,,passes,3.0,realistic_cache_seed0
+E5,Average,Fixed k=6,,Average,0.6171315057122561,realistic_cache_seed0
+E5,all-test,Fixed k=6,,mean_k,6.0,realistic_cache_seed0
+E5,all-test,Fixed k=6,,latency_ms,1080.0,realistic_cache_seed0
+E5,all-test,Fixed k=6,,passes,6.0,realistic_cache_seed0
+E5,Average,Fixed k=10,,Average,0.5608502698299577,realistic_cache_seed0
+E5,all-test,Fixed k=10,,mean_k,10.0,realistic_cache_seed0
+E5,all-test,Fixed k=10,,latency_ms,1800.0,realistic_cache_seed0
+E5,all-test,Fixed k=10,,passes,10.0,realistic_cache_seed0
+E5,Average,Adaptive k*,,Average,0.6313184408113123,realistic_cache_seed0
+E5,all-test,Adaptive k*,,mean_k,3.075563258232236,realistic_cache_seed0
+E5,all-test,Adaptive k*,,latency_ms,553.6013864818025,realistic_cache_seed0
+E5,all-test,Adaptive k*,,passes,3.075563258232236,realistic_cache_seed0
+E5,all-test,Adaptive k*,,passes_saved_vs_10,6.924436741767764,realistic_cache_seed0
+E6,dev,tau,0.01,ece,0.08016568781445654,realistic_cache_seed0
+E6,dev,tau,0.01,nll,1.1439988490908888,realistic_cache_seed0
+E6,dev,tau,0.01,mean_entropy,0.8746477831048547,realistic_cache_seed0
+E6,dev,tau,0.01,bayes_accuracy_k5,0.6163434903047091,realistic_cache_seed0
+E6,dev,tau,0.02,ece,0.22236155783348485,realistic_cache_seed0
+E6,dev,tau,0.02,nll,1.1740933459437655,realistic_cache_seed0
+E6,dev,tau,0.02,mean_entropy,1.5027961676912878,realistic_cache_seed0
+E6,dev,tau,0.02,bayes_accuracy_k5,0.685595567867036,realistic_cache_seed0
+E6,dev,tau,0.05,ece,0.4388209005714134,realistic_cache_seed0
+E6,dev,tau,0.05,nll,1.5854283269274547,realistic_cache_seed0
+E6,dev,tau,0.05,mean_entropy,2.0908907738829186,realistic_cache_seed0
+E6,dev,tau,0.05,bayes_accuracy_k5,0.6842105263157895,realistic_cache_seed0
+E6,dev,tau,0.1,ece,0.5122040367788152,realistic_cache_seed0
+E6,dev,tau,0.1,nll,1.876594325985478,realistic_cache_seed0
+E6,dev,tau,0.1,mean_entropy,2.2438265839337337,realistic_cache_seed0
+E6,dev,tau,0.1,bayes_accuracy_k5,0.685595567867036,realistic_cache_seed0
+E6,dev,tau,0.5,ece,0.5632986275771191,realistic_cache_seed0
+E6,dev,tau,0.5,nll,2.189425579056065,realistic_cache_seed0
+E6,dev,tau,0.5,mean_entropy,2.3001469853433845,realistic_cache_seed0
+E6,dev,tau,0.5,bayes_accuracy_k5,0.6565096952908587,realistic_cache_seed0
+E6,dev,tau,1.0,ece,0.5689932485544489,realistic_cache_seed0
+E6,dev,tau,1.0,nll,2.2339141920036947,realistic_cache_seed0
+E6,dev,tau,1.0,mean_entropy,2.3019748232903563,realistic_cache_seed0
+E6,dev,tau,1.0,bayes_accuracy_k5,0.6565096952908587,realistic_cache_seed0
+E6,dev,alpha,0.0,accuracy_k6,0.685595567867036,realistic_cache_seed0
+E6,dev,alpha,0.0,pixel_share,0.16666666666666838,realistic_cache_seed0
+E6,dev,alpha,0.5,accuracy_k6,0.631578947368421,realistic_cache_seed0
+E6,dev,alpha,0.5,pixel_share,0.31807272294136524,realistic_cache_seed0
+E6,dev,alpha,1.0,accuracy_k6,0.574792243767313,realistic_cache_seed0
+E6,dev,alpha,1.0,pixel_share,0.43355168983931236,realistic_cache_seed0
+E6,dev,alpha,2.0,accuracy_k6,0.574792243767313,realistic_cache_seed0
+E6,dev,alpha,2.0,pixel_share,0.5382960404876694,realistic_cache_seed0
+E6,dev,alpha,4.0,accuracy_k6,0.574792243767313,realistic_cache_seed0
+E6,dev,alpha,4.0,pixel_share,0.5865831871501141,realistic_cache_seed0
+E6,dev,rho,0.5,accuracy,0.574792243767313,realistic_cache_seed0
+E6,dev,rho,0.5,mean_k,1.1066481994459834,realistic_cache_seed0
+E6,dev,rho,0.7,accuracy,0.5720221606648199,realistic_cache_seed0
+E6,dev,rho,0.7,mean_k,1.951523545706371,realistic_cache_seed0
+E6,dev,rho,0.8,accuracy,0.5872576177285319,realistic_cache_seed0
+E6,dev,rho,0.8,mean_k,2.2285318559556786,realistic_cache_seed0
+E6,dev,rho,0.9,accuracy,0.6565096952908587,realistic_cache_seed0
+E6,dev,rho,0.9,mean_k,3.069252077562327,realistic_cache_seed0
+E6,dev,rho,0.95,accuracy,0.6592797783933518,realistic_cache_seed0
+E6,dev,rho,0.95,mean_k,3.8254847645429364,realistic_cache_seed0
+E6,dev,rho,0.99,accuracy,0.6426592797783933,realistic_cache_seed0
+E6,dev,rho,0.99,mean_k,5.569252077562327,realistic_cache_seed0
+checkpoint,dev-fit,operating point,,tau,0.013217313215136528,realistic_cache_seed0
+checkpoint,dev-fit,operating point,,alpha,0.5,realistic_cache_seed0
+checkpoint,dev-fit,operating point,,rho,0.9,realistic_cache_seed0

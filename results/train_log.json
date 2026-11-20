@@ -1,0 +1,116 @@
+{
+  "baseline": {
+    "experiment": "baseline",
+    "config": "/Users/aaryanbondekar/Desktop/Sem 7/DLCV/visrag-calibrated/configs/baseline.yaml",
+    "checkpoint": "/Users/aaryanbondekar/Desktop/Sem 7/DLCV/visrag-calibrated/checkpoints/best_calibrated_visrag.pt",
+    "source": "generate_realistic_visrag_cache",
+    "n_queries": 3607,
+    "n_dev": 722,
+    "n_test": 2885,
+    "tau_config": 1.0,
+    "tau_operating": 1.0,
+    "tau_fitted": 0.0132136270403862,
+    "fit": {
+      "optimizer": "lbfgs",
+      "tau_before": 1.0,
+      "tau_after": 0.0132136270403862,
+      "nll_before": 2.2339141368865967,
+      "nll_after": 1.1055012941360474,
+      "n_queries": 664,
+      "n_dropped": 58
+    },
+    "dev_calibration": {
+      "1": {
+        "tau": 1.0,
+        "ece": 0.5689932485544489,
+        "nll": 2.2339141920036947,
+        "mean_entropy": 2.3019748232903563,
+        "top1_accuracy": 0.6745152354570637
+      },
+      "0.02": {
+        "tau": 0.02,
+        "ece": 0.22236155783348485,
+        "nll": 1.1740933459437655,
+        "mean_entropy": 1.5027961676912878,
+        "top1_accuracy": 0.6745152354570637
+      },
+      "fitted": {
+        "tau": 0.0132136270403862,
+        "ece": 0.08188666494533366,
+        "nll": 1.1055015490318862,
+        "mean_entropy": 1.1251280682678266,
+        "top1_accuracy": 0.6745152354570637
+      }
+    },
+    "alpha": 1.0,
+    "rho": 0.9,
+    "alpha_sweep": [],
+    "rho_sweep": [],
+    "aggregator": {
+      "loss_before": 1.1067440509796143,
+      "loss_after": 0.09578124433755875,
+      "epochs": 400,
+      "n_examples": 7220,
+      "pos_weight": 3.3890577507598785,
+      "dev_accuracy": 0.7008310249307479
+    },
+    "seconds": 1.448
+  },
+  "proposed": {
+    "experiment": "proposed",
+    "config": "/Users/aaryanbondekar/Desktop/Sem 7/DLCV/visrag-calibrated/configs/proposed.yaml",
+    "checkpoint": "/Users/aaryanbondekar/Desktop/Sem 7/DLCV/visrag-calibrated/checkpoints/best_calibrated_visrag.pt",
+    "source": "generate_realistic_visrag_cache",
+    "n_queries": 3607,
+    "n_dev": 722,
+    "n_test": 2885,
+    "tau_config": 0.02,
+    "tau_operating": 0.013217313215136528,
+    "tau_fitted": 0.013217313215136528,
+    "fit": {
+      "optimizer": "lbfgs",
+      "tau_before": 0.019999999552965164,
+      "tau_after": 0.013217313215136528,
+      "nll_before": 1.1740937232971191,
+      "nll_after": 1.1055012941360474,
+      "n_queries": 664,
+      "n_dropped": 58
+    },
+    "dev_calibration": {
+      "1": {
+        "tau": 1.0,
+        "ece": 0.5689932485544489,
+        "nll": 2.2339141920036947,
+        "mean_entropy": 2.3019748232903563,
+        "top1_accuracy": 0.6745152354570637
+      },
+      "0.02": {
+        "tau": 0.02,
+        "ece": 0.22236155783348485,
+        "nll": 1.1740933459437655,
+        "mean_entropy": 1.5027961676912878,
+        "top1_accuracy": 0.6745152354570637
+      },
+      "fitted": {
+        "tau": 0.013217313215136528,
+        "ece": 0.08195030766832903,
+        "nll": 1.105501547621326,
+        "mean_entropy": 1.1253841600475536,
+        "top1_accuracy": 0.6745152354570637
+      }
+    },
+    "alpha": 0.5,
+    "rho": 0.9,
+    "alpha_sweep": [],
+    "rho_sweep": [],
+    "aggregator": {
+      "loss_before": 1.1108334064483643,
+      "loss_after": 0.08289709687232971,
+      "epochs": 400,
+      "n_examples": 7220,
+      "pos_weight": 3.3890577507598785,
+      "dev_accuracy": 0.7008310249307479
+    },
+    "seconds": 1.41
+  }
+}

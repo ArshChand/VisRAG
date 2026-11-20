@@ -1,0 +1,14 @@
+torch>=2.1.0
+torchvision
+transformers==4.40.2
+datasets
+accelerate
+bitsandbytes
+sentencepiece
+pillow
+pyyaml
+tqdm
+numpy
+scikit-learn
+matplotlib
+pytrec_eval

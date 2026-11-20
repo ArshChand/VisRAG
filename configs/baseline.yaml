@@ -1,0 +1,27 @@
+# VisRAG weighted selection with an uncalibrated posterior, tau = 1.
+experiment: baseline
+seed: 0
+dev_split_ratio: 0.2
+tau: 1.0
+alpha: 1.0
+rho: 0.90
+k_values: [1, 2, 3, 6, 10]
+learn_temperature: false
+
+retrieval:
+  model_name: openbmb/VisRAG-Ret
+  dtype: float16
+  attn_implementation: sdpa
+  top_k: 10
+
+generation:
+  model_name: openbmb/MiniCPM-V-2
+  alt_model_name: Qwen/Qwen2-VL-2B-Instruct
+  dtype: float16
+  attn_implementation: sdpa
+  aggregator: page_concat
+
+paths:
+  results_dir: results
+  cache_dir: results/cache
+  checkpoint: checkpoints/best_calibrated_visrag.pt

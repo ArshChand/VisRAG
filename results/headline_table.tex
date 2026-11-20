@@ -1,0 +1,33 @@
+% Computed from the realistic cache by compute_retrieval_metrics and relaxed_exact_match.
+% Not a live VisRAG-Ret / MiniCPM-V run and not copied from the paper.
+\begin{table}[t]
+\centering
+\begin{tabular}{lrr}
+\hline
+Dataset & MRR@10 & Recall@10 \\
+\hline
+ArxivQA & 75.28 & 87.90 \\
+ChartQA & 74.90 & 88.00 \\
+MP-DocVQA & 75.97 & 91.12 \\
+InfoVQA & 86.83 & 97.21 \\
+PlotQA & 61.67 & 89.28 \\
+SlideVQA & 91.97 & 97.53 \\
+Average & 77.77 & 91.84 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+% Bayes and S2 use the checkpoint tau (0.0132).
+\begin{tabular}{lrrrr}
+\hline
+Method & k=1 & k=2 & k=3 & k=5 \\
+\hline
+Weighted tau=1 & 56.78 & 56.02 & 54.76 & 51.46 \\
+Weighted tau=0.02 & 56.78 & 56.78 & 56.78 & 56.78 \\
+Bayes & 56.78 & 61.73 & 64.56 & 64.92 \\
+S2 aggregator & 56.78 & 66.94 & 66.94 & 68.34 \\
+\hline
+\end{tabular}
+\end{table}

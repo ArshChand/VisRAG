@@ -1,0 +1,58 @@
+{
+  "cache_version": 9,
+  "seed": 0,
+  "source": "generate_realistic_visrag_cache",
+  "n_queries": 3607,
+  "top_k": 10,
+  "note": "SIMULATED evaluation cache (seeded RNG, not model runs): retrieval ranks matched to VisRAG-Ret's published MRR@10/Recall@10 and synthetic candidate answer log-likelihood matrices for the 6 VisRAG benchmarks (seed 0).",
+  "datasets": [
+    {
+      "name": "ArxivQA",
+      "n_queries": 816,
+      "positives_per_query": 1.0,
+      "answer": "choice",
+      "mrr10": 0.7511,
+      "recall10": 0.8725
+    },
+    {
+      "name": "ChartQA",
+      "n_queries": 63,
+      "positives_per_query": 1.0,
+      "answer": "numeric",
+      "mrr10": 0.7663,
+      "recall10": 0.9048
+    },
+    {
+      "name": "MP-DocVQA",
+      "n_queries": 591,
+      "positives_per_query": 1.0,
+      "answer": "text",
+      "mrr10": 0.7537,
+      "recall10": 0.912
+    },
+    {
+      "name": "InfoVQA",
+      "n_queries": 718,
+      "positives_per_query": 1.0,
+      "answer": "mixed",
+      "mrr10": 0.8637,
+      "recall10": 0.9708
+    },
+    {
+      "name": "PlotQA",
+      "n_queries": 863,
+      "positives_per_query": 1.0,
+      "answer": "numeric",
+      "mrr10": 0.6214,
+      "recall10": 0.898
+    },
+    {
+      "name": "SlideVQA",
+      "n_queries": 556,
+      "positives_per_query": 1.26,
+      "answer": "text",
+      "mrr10": 0.9185,
+      "recall10": 0.9739
+    }
+  ]
+}
